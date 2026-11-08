@@ -2,1136 +2,300 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Claudio Junior Alicati</title>
-<meta name="description" content="Portfólio de Claudio Junior Alicati: sistemas web com React, Next.js, TypeScript e Supabase. Projetos Atrium, Leon Barber Shop e ClientFlow.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claudio Junior Alicati, desenvolvedor full stack</title>
+<meta name="description" content="Portfólio de Claudio Junior Alicati, desenvolvedor full stack. Atrium, Leon Barber Shop e ClientFlow: sistemas web publicados, com link para abrir cada um.">
 <meta name="author" content="Claudio Junior Alicati">
-<meta name="theme-color" content="#1240AB">
+<meta name="theme-color" content="#0B1631">
 <link rel="canonical" href="https://cjajunior.github.io/">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E %3Crect width='64' height='64' rx='12' fill='%231240AB'/%3E %3Crect x='6' y='42' width='52' height='14' rx='4' fill='%23FFCC1F'/%3E %3Ctext x='32' y='36' text-anchor='middle' font-family='Arial, Helvetica, sans-serif' font-size='28' font-weight='800' fill='%23FFFFFF'%3ECJ%3C/text%3E %3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://cjajunior.github.io/">
-<meta property="og:title" content="Claudio Junior Alicati, desenvolvedor web">
-<meta property="og:description" content="Sistemas web com React, Next.js, TypeScript e Supabase: portal de clientes, agendamento e gestão financeira.">
+<meta property="og:title" content="Claudio Junior Alicati, desenvolvedor full stack">
+<meta property="og:description" content="Sistemas web para negócios de verdade: Atrium, Leon Barber Shop e ClientFlow.">
 <meta property="og:image" content="https://cjajunior.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Claudio Junior Alicati, desenvolvedor full stack, com telas dos projetos Atrium, Leon Barber Shop e ClientFlow.">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@200..800&amp;display=swap">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
 <script>
-  (function () {
-    var tema = null;
-    try { tema = window.localStorage.getItem('cja-contraste'); } catch (e) { tema = null; }
-    if (tema === 'escuro') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    if (tema === 'claro') { document.documentElement.setAttribute('data-theme', 'light'); }
-  })();
+  document.documentElement.classList.add('js');
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+  setTimeout(function () { document.documentElement.classList.add('pronto'); }, 4000);
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Claudio Junior Alicati",
-  "jobTitle": "Desenvolvedor web",
-  "url": "https://cjajunior.github.io/",
-  "email": "mailto:claudiojunioralicate@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Campo Limpo Paulista", "addressRegion": "SP", "addressCountry": "BR" },
-  "sameAs": ["https://www.linkedin.com/in/claudio-junior-a69ba6246/", "https://github.com/cjajunior"]
-}
-</script>
-<style>
-
-  :root {
-    --azul: #1240AB;
-    --azul-escuro: #0B2E80;
-    --amarelo: #FFCC1F;
-    --preto: #000000;
-    --branco: #FFFFFF;
-
-    --fundo: #FFFFFF;
-    --texto: #000000;
-    --texto-suave: #4A5160;
-    --borda: #000000;
-    --link: #1240AB;
-    --link-hover: #0B2E80;
-    --painel: #E8EEFB;
-    --superficie: #FFFFFF;
-    --linha-suave: #C5CFE2;
-    --serie: #1240AB;
-    --trilho: #1240AB;
-    --destaque-fundo: #000000;
-    --destaque-texto: #FFCC1F;
-    --risco-a: #FFFFFF;
-    --risco-b: #E1E6F0;
-    --risco-texto: #5B6270;
-    --risco-borda: #8A93A3;
-
-    --medida: 64ch;
-    --pad: clamp(1rem, 4vw, 3rem);
-    --largura: 72rem;
-    color-scheme: light;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --fundo: #000000;
-      --texto: #FFFFFF;
-      --texto-suave: #C9D1E0;
-      --borda: #FFFFFF;
-      --link: #8FB2FF;
-      --link-hover: #B9CFFF;
-      --painel: #0E1D42;
-      --superficie: #000000;
-      --linha-suave: #3B4558;
-      --serie: #8FB2FF;
-      --trilho: #8FB2FF;
-      --destaque-fundo: #FFCC1F;
-      --destaque-texto: #000000;
-      --risco-a: #000000;
-      --risco-b: #262B36;
-      --risco-texto: #A8B0BF;
-      --risco-borda: #6B7385;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --fundo: #000000;
-    --texto: #FFFFFF;
-    --texto-suave: #C9D1E0;
-    --borda: #FFFFFF;
-    --link: #8FB2FF;
-    --link-hover: #B9CFFF;
-    --painel: #0E1D42;
-    --superficie: #000000;
-    --linha-suave: #3B4558;
-    --serie: #8FB2FF;
-    --trilho: #8FB2FF;
-    --destaque-fundo: #FFCC1F;
-    --destaque-texto: #000000;
-    --risco-a: #000000;
-    --risco-b: #262B36;
-    --risco-texto: #A8B0BF;
-    --risco-borda: #6B7385;
-    color-scheme: dark;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; }
-  html { font-size: 100%; scroll-behavior: smooth; scroll-padding-top: 5rem; }
-  body {
-    margin: 0;
-    font-family: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
-    font-size: 1.125rem;
-    line-height: 1.55;
-    color: var(--texto);
-    background: var(--fundo);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--fundo); }
-  img, svg { display: block; max-width: 100%; }
-  a { color: var(--link); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
-  a:hover { color: var(--link-hover); }
-  :focus-visible { outline: 3px solid var(--texto); outline-offset: 3px; box-shadow: 0 0 0 7px var(--amarelo); border-radius: 4px; }
-  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-  .pular { position: absolute; left: 1rem; top: -4rem; z-index: 20; background: var(--amarelo); color: var(--preto); font-weight: 800; padding: 0.7rem 1rem; border: 3px solid var(--preto); border-radius: 8px; text-decoration: none; }
-  .pular:focus { top: 1rem; }
-
-  /* Topo */
-  .topo {
-    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
-    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    padding-block: 0.7rem; padding-left: max(var(--pad), env(safe-area-inset-left, 0px)); padding-right: max(var(--pad), env(safe-area-inset-right, 0px));
-    background: var(--fundo);
-    border-bottom: 2px solid var(--borda);
-  }
-  .marca {
-    display: inline-grid; place-items: center; flex: none;
-    width: 2.75rem; height: 2.75rem;
-    background: var(--azul); color: var(--branco);
-    font-weight: 800; font-size: 1.05rem; letter-spacing: 0.02em;
-    text-decoration: none; border-radius: 8px;
-  }
-  .marca:hover { color: var(--branco); background: var(--azul-escuro); }
-  .topo-nav { display: flex; gap: 1.5rem; margin-right: auto; margin-left: 1rem; }
-  .topo-nav a { position: relative; color: var(--texto); font-weight: 700; text-decoration: none; padding: 0.3rem 0; }
-  .topo-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -0.1rem; height: 3px; background: var(--amarelo); transform: scaleX(0); transform-origin: 0 50%; transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1); }
-  .topo-nav a:hover { color: var(--texto); }
-  .topo-nav a:hover::after, .topo-nav a:focus-visible::after { transform: scaleX(1); }
-  .ajustes { display: flex; align-items: center; gap: 0.4rem; }
-  .ajustes-rotulo { font-size: 0.9rem; color: var(--texto-suave); margin: 0 0.15rem 0 0.4rem; }
-  .ajustes button {
-    font: inherit; font-weight: 800; line-height: 1;
-    min-width: 2.75rem; height: 2.75rem; padding: 0 0.55rem;
-    color: var(--texto); background: var(--superficie);
-    border: 2px solid var(--borda); border-radius: 8px; cursor: pointer;
-  }
-  .ajustes button[data-escala="1"] { font-size: 0.95rem; }
-  .ajustes button[data-escala="1.125"] { font-size: 1.1rem; }
-  .ajustes button[data-escala="1.25"] { font-size: 1.25rem; }
-  .ajustes button.contraste { font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.4rem; margin-left: 0.35rem; }
-  .ajustes button.contraste svg { width: 1.1rem; height: 1.1rem; }
-  .ajustes button:hover { background: var(--amarelo); color: var(--preto); }
-  .ajustes button[aria-pressed="true"] { background: var(--destaque-fundo); color: var(--destaque-texto); }
-
-  /* Abertura */
-  .abertura {
-    background: var(--azul); color: var(--branco);
-    padding-block: clamp(3rem, 8vw, 6.5rem) clamp(3rem, 7vw, 5rem); padding-left: max(var(--pad), env(safe-area-inset-left, 0px)); padding-right: max(var(--pad), env(safe-area-inset-right, 0px));
-  }
-  .abertura-inner {
-    max-width: var(--largura); margin: 0 auto;
-    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: clamp(2rem, 5vw, 4.5rem); align-items: end;
-  }
-  .abertura h1 {
-    margin: 0 0 1.5rem;
-    font-size: clamp(3rem, 8.8vw, 7.25rem);
-    font-weight: 800; line-height: 0.9; letter-spacing: -0.035em;
-  }
-  .abertura h1 span { display: block; }
-  .abertura-texto { margin: 0; max-width: 36ch; font-size: clamp(1.15rem, 1.7vw, 1.4rem); line-height: 1.45; }
-  .abertura a { color: var(--branco); }
-
-  .placa {
-    display: grid; gap: 0.5rem;
-    padding: 0.55rem;
-    background: var(--preto);
-    border-radius: 16px;
-  }
-  .placa-topo { display: flex; align-items: center; gap: 0.6rem; padding: 0.35rem 0.6rem 0.15rem; color: var(--branco); font-size: 0.95rem; }
-  .ponto-aqui { width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--amarelo); box-shadow: 0 0 0 3px var(--preto), 0 0 0 5px var(--amarelo); flex: none; }
-  .placa-linha {
-    display: grid; grid-template-columns: 3.4rem minmax(0, 1fr);
-    column-gap: 1rem; align-items: center;
-    padding: 0.8rem 0.9rem;
-    color: var(--amarelo); text-decoration: none;
-    border: 2px solid #2B2B2B; border-radius: 10px;
-  }
-  .abertura .placa-linha { color: var(--amarelo); }
-  .placa-seta {
-    grid-row: span 2;
-    display: grid; place-items: center;
-    width: 3.4rem; height: 3.4rem;
-    background: var(--amarelo); color: var(--preto); border-radius: 7px;
-  }
-  .placa-seta svg { width: 2rem; height: 2rem; }
-  .placa-destino { font-size: 1.65rem; font-weight: 800; line-height: 1.1; }
-  .placa-detalhe { color: var(--branco); font-size: 1rem; line-height: 1.35; }
-  .placa-linha:hover, .placa-linha:focus-visible { background: var(--amarelo); border-color: var(--amarelo); color: var(--preto); box-shadow: none; outline-color: var(--branco); }
-  .abertura .placa-linha:hover, .abertura .placa-linha:focus-visible { color: var(--preto); }
-  .placa-linha:hover .placa-detalhe, .placa-linha:focus-visible .placa-detalhe { color: var(--preto); }
-  .placa-linha:hover .placa-seta, .placa-linha:focus-visible .placa-seta { background: var(--preto); color: var(--amarelo); }
-  @media (prefers-reduced-motion: no-preference) {
-    .placa-linha { animation: acende 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-    .placa-linha:nth-of-type(2) { animation-delay: 0.14s; }
-    .placa-linha:nth-of-type(3) { animation-delay: 0.28s; }
-    @keyframes acende {
-      from { opacity: 0; transform: translateX(-16px); }
-      to { opacity: 1; transform: none; }
-    }
-  }
-
-  /* Seções */
-  .secao { padding-block: clamp(3.5rem, 8vw, 6rem); padding-left: max(var(--pad), env(safe-area-inset-left, 0px)); padding-right: max(var(--pad), env(safe-area-inset-right, 0px)); }
-  .secao-inner { max-width: var(--largura); margin: 0 auto; }
-  .secao h2 {
-    margin: 0 0 0.75rem;
-    font-size: clamp(2.2rem, 4.6vw, 3.4rem);
-    font-weight: 800; line-height: 1.04; letter-spacing: -0.02em;
-  }
-  .intro { max-width: var(--medida); margin: 0 0 2.5rem; font-size: 1.25rem; color: var(--texto-suave); }
-
-  /* Projetos */
-  .projeto {
-    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    gap: clamp(1.75rem, 4.5vw, 4rem);
-    padding: clamp(2rem, 5vw, 3.25rem) 0;
-    border-top: 3px solid var(--borda);
-  }
-  .projeto h3 { margin: 0; font-size: clamp(1.9rem, 3.2vw, 2.5rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.015em; }
-  .projeto-foco { margin: 0.2rem 0 0.9rem; font-weight: 800; font-size: 1.1rem; color: var(--link); }
-  .projeto-resumo { margin: 0 0 1.1rem; max-width: 46ch; font-size: 1.22rem; line-height: 1.5; }
-  .destaques { margin: 0 0 1.1rem; padding-left: 1.25rem; max-width: 52ch; }
-  .destaques li { margin: 0 0 0.45rem; padding-left: 0.2rem; }
-  .destaques li::marker { color: var(--link); }
-  .feito-com { margin: 0 0 1.5rem; color: var(--texto-suave); max-width: 52ch; }
-  .acoes { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-  .botao {
-    display: inline-flex; align-items: center; justify-content: center;
-    min-height: 3rem; padding: 0 1.3rem;
-    font-weight: 800; color: var(--texto); text-decoration: none;
-    background: var(--superficie); border: 3px solid var(--borda); border-radius: 10px;
-  }
-  .botao:hover { background: var(--amarelo); color: var(--preto); border-color: var(--preto); }
-  .botao-principal { background: var(--azul); border-color: var(--serie); color: var(--branco); }
-  .botao-principal:hover { background: var(--azul-escuro); border-color: var(--serie); color: var(--branco); }
-
-  .demo { margin: 0; align-self: start; }
-  .demo-tela {
-    padding: 1.1rem;
-    background: var(--painel);
-    border: 3px solid var(--borda); border-radius: 16px;
-  }
-  .demo-titulo { margin: 0 0 0.75rem; font-weight: 800; font-size: 1.05rem; }
-  .demo figcaption { margin-top: 0.65rem; font-size: 0.95rem; color: var(--texto-suave); max-width: 56ch; }
-  .demo-status { margin: 0.85rem 0 0; font-weight: 700; min-height: 3em; }
-  .escolhas { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 0.9rem; }
-  .escolhas button, .horarios button, .demo-botao {
-    font: inherit; font-size: 1rem; font-weight: 700;
-    min-height: 2.75rem; padding: 0 0.9rem;
-    color: var(--texto); background: var(--superficie);
-    border: 2px solid var(--borda); border-radius: 8px; cursor: pointer;
-  }
-  .escolhas button:hover, .demo-botao:hover, .horarios button:hover { background: var(--amarelo); color: var(--preto); }
-  .escolhas button[aria-pressed="true"], .demo-botao[aria-pressed="true"] { background: var(--destaque-fundo); color: var(--destaque-texto); }
-
-  .registros { width: 100%; border-collapse: collapse; background: var(--superficie); border: 2px solid var(--borda); font-size: 1rem; }
-  .registros th, .registros td { padding: 0.55rem 0.75rem; text-align: left; border-bottom: 1px solid var(--linha-suave); vertical-align: top; }
-  .registros th { font-size: 0.9rem; font-weight: 700; color: var(--texto-suave); }
-  .registros tbody tr:last-child td { border-bottom: 0; }
-  .marcador-interno { display: inline-block; margin-left: 0.35rem; padding: 0 0.4rem; font-size: 0.8rem; font-weight: 800; color: var(--preto); background: var(--amarelo); border-radius: 4px; }
-
-  .horarios { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.5rem; }
-  .horarios button { padding: 0 0.4rem; font-variant-numeric: tabular-nums; }
-  .horarios button[aria-disabled="true"] {
-    color: var(--risco-texto); border-color: var(--risco-borda); cursor: not-allowed; text-decoration: line-through;
-    background: repeating-linear-gradient(-45deg, var(--risco-a) 0 6px, var(--risco-b) 6px 12px);
-  }
-  .horarios button[data-reservado="true"] { background: var(--azul); border-color: var(--serie); color: var(--branco); text-decoration: none; }
-  .linha-demo { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0 0 0.75rem; }
-  .linha-demo .demo-titulo { margin: 0; }
-  .demo-botao.discreto { min-height: 2.4rem; font-size: 0.95rem; }
-
-  .grafico { background: var(--superficie); border: 2px solid var(--borda); border-radius: 10px; padding: 0.5rem 0.5rem 0.25rem; }
-  .grafico text { font-family: inherit; font-size: 13px; fill: var(--texto-suave); }
-  .grafico .rotulo-forte { font-weight: 800; fill: var(--texto); }
-  .grafico .grade { stroke: var(--linha-suave); stroke-width: 1; }
-  .grafico .eixo { stroke: var(--borda); stroke-width: 1.5; }
-  .grafico .hoje { stroke: var(--borda); stroke-width: 1.5; stroke-dasharray: 2 3; }
-  .grafico .serie { fill: none; stroke: var(--serie); stroke-width: 3.5; stroke-linejoin: round; stroke-linecap: round; }
-  .grafico .ponto { fill: var(--serie); }
-  .grafico .serie-previsao { fill: none; stroke: var(--texto); stroke-width: 3; stroke-dasharray: 7 5; stroke-linejoin: round; stroke-linecap: round; }
-  .grafico .ponto-previsao { fill: var(--amarelo); stroke: var(--preto); stroke-width: 2; }
-  .previsao { transition: opacity 0.35s ease; }
-  .previsao[data-oculta="true"] { opacity: 0; }
-  .legenda { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0.6rem 0 0.75rem; font-size: 0.95rem; }
-  .legenda span { display: inline-flex; align-items: center; gap: 0.4rem; }
-  .legenda i { display: inline-block; width: 1.6rem; height: 0; border-top: 3px solid var(--serie); }
-  .legenda i.tracejado { border-top: 3px dashed var(--texto); }
-
-  /* Sobre */
-  .sobre { background: var(--painel); }
-  .sobre-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
-  .sobre-texto p { margin: 0 0 1.1rem; max-width: var(--medida); font-size: 1.22rem; }
-  .fatos { margin: 0; padding: 1.25rem 1.4rem; background: var(--superficie); border: 3px solid var(--borda); border-radius: 16px; }
-  .fatos div { padding: 0.65rem 0; border-bottom: 1px solid var(--linha-suave); }
-  .fatos div:last-child { border-bottom: 0; }
-  .fatos dt { font-weight: 800; }
-  .fatos dd { margin: 0.1rem 0 0; }
-
-  /* Trajetória: linha com estações */
-  .linha-trajetoria { list-style: none; margin: 0; padding: 0; max-width: 62rem; }
-  .estacao {
-    display: grid;
-    grid-template-columns: 9rem 2.75rem minmax(0, 1fr);
-    column-gap: 1.1rem;
-  }
-  .estacao-data { grid-column: 1; grid-row: 1; margin: 0; padding-top: 0.3rem; text-align: right; font-weight: 800; font-size: 1.05rem; font-variant-numeric: tabular-nums; }
-  .estacao-trilho { grid-column: 2; grid-row: 1 / span 2; position: relative; display: flex; justify-content: center; }
-  .estacao-trilho::before, .estacao-trilho::after {
-    content: ""; position: absolute; left: 50%; width: 8px; margin-left: -4px;
-    background: var(--trilho);
-  }
-  .estacao-trilho::before { top: 0; height: 1.15rem; }
-  .estacao-trilho::after { top: 1.15rem; bottom: 0; }
-  .estacao:first-child .estacao-trilho::before { display: none; }
-  .estacao:last-child .estacao-trilho::after { display: none; }
-  .estacao-atual .estacao-trilho::after, .estacao-futura .estacao-trilho::before {
-    background: repeating-linear-gradient(to bottom, var(--trilho) 0 9px, transparent 9px 16px);
-  }
-  .estacao-marca {
-    position: relative; z-index: 1;
-    width: 1.7rem; height: 1.7rem; margin-top: 0.3rem;
-    border-radius: 50%; background: var(--fundo); border: 5px solid var(--trilho);
-  }
-  .estacao-atual .estacao-marca { width: 2.1rem; height: 2.1rem; margin-top: 0.1rem; background: var(--amarelo); border-color: var(--texto); }
-  .estacao-futura .estacao-marca { border-style: dashed; }
-  .estacao-corpo { grid-column: 3; grid-row: 1 / span 2; padding: 0.2rem 0 2.2rem; }
-  .estacao-corpo h3 { margin: 0 0 0.25rem; font-size: 1.35rem; font-weight: 800; line-height: 1.25; }
-  .estacao-corpo p { margin: 0; color: var(--texto-suave); max-width: 58ch; }
-  .estacao-atual .estacao-data { color: var(--link); }
-
-  /* Competências e certificações */
-  .tecnico { border-top: 2px solid var(--borda); }
-  .tecnico-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); }
-  .tecnico h3 { margin: 0 0 1rem; font-size: 1.5rem; font-weight: 800; }
-  .competencias { margin: 0; }
-  .competencias div { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr); gap: 1rem; padding: 0.7rem 0; border-top: 1px solid var(--linha-suave); }
-  .competencias dt { font-weight: 800; }
-  .competencias dd { margin: 0; }
-  .certificados { margin: 0; padding: 0; list-style: none; }
-  .certificados > li { padding: 0.7rem 0; border-top: 1px solid var(--linha-suave); }
-  .certificados strong { display: block; }
-  .certificados ul { margin: 0.3rem 0 0; padding-left: 1.2rem; color: var(--texto-suave); font-size: 1rem; }
-
-  /* Contato */
-  .contato { background: var(--amarelo); color: var(--preto); }
-  .contato h2 { font-size: clamp(2.6rem, 6.4vw, 4.75rem); line-height: 0.98; }
-  .contato .intro { color: var(--preto); }
-  .contato-lista { display: grid; gap: 0.6rem; max-width: 44rem; margin: 0; padding: 0; list-style: none; }
-  .contato-lista a {
-    display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); column-gap: 1rem; align-items: center;
-    padding: 0.8rem 0.9rem;
-    color: var(--amarelo); background: var(--preto); text-decoration: none;
-    border-radius: 12px;
-  }
-  .contato-lista .placa-seta { grid-row: span 2; }
-  .contato-lista .rotulo { font-size: 1.45rem; font-weight: 800; line-height: 1.15; }
-  .contato-lista .valor { color: var(--branco); font-size: 1.05rem; overflow-wrap: anywhere; }
-  .contato-lista a:hover, .contato-lista a:focus-visible { background: var(--azul); color: var(--branco); }
-  .contato-lista a:hover .placa-seta, .contato-lista a:focus-visible .placa-seta { background: var(--branco); }
-  .contato-lista a:focus-visible { outline-color: var(--preto); box-shadow: 0 0 0 7px var(--branco); }
-
-  .rodape { padding-block: 2rem; padding-left: max(var(--pad), env(safe-area-inset-left, 0px)); padding-right: max(var(--pad), env(safe-area-inset-right, 0px)); background: var(--preto); color: var(--branco); font-size: 0.95rem; }
-  .copiar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 1.1rem; }
-  .copiar-status { margin: 0; font-weight: 800; }
-  .rodape-inner { max-width: var(--largura); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; justify-content: space-between; }
-  .rodape p { margin: 0; max-width: 60ch; }
-
-  /* Movimento */
-  .abertura { position: relative; overflow: hidden; }
-  .abertura::before {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(560px circle at var(--luz-x, 70%) var(--luz-y, 30%), rgba(255, 255, 255, 0.14), transparent 62%);
-    opacity: var(--luz-opacidade, 0); transition: opacity 0.4s ease;
-  }
-  .abertura-inner { position: relative; }
-  .abertura h1 .linha-nome { overflow: hidden; padding-bottom: 0.12em; margin-bottom: -0.12em; }
-  .progresso { position: absolute; left: 0; right: 0; bottom: -2px; height: 4px; background: var(--link); transform-origin: 0 50%; transform: scaleX(var(--progresso, 0)); }
-  .placa-destino { white-space: nowrap; }
-
-  .letreiro { display: flex; align-items: stretch; background: var(--preto); color: var(--amarelo); overflow: hidden; }
-  .letreiro-rotulo {
-    flex: none; display: grid; place-items: center;
-    padding-block: 0; padding-right: 1rem; padding-left: max(var(--pad), env(safe-area-inset-left, 0px));
-    background: var(--amarelo); color: var(--preto); font-weight: 800; font-size: 1.05rem; white-space: nowrap;
-  }
-  .letreiro-janela { flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); }
-  .letreiro-trilho { display: flex; width: max-content; margin: 0; padding: 0.95rem 0; list-style: none; }
-  .letreiro-trilho li { display: inline-flex; align-items: center; gap: 1.4rem; padding-right: 1.4rem; font-size: 1.5rem; font-weight: 800; white-space: nowrap; }
-  .letreiro-trilho li::after { content: ""; width: 0.55rem; height: 0.55rem; background: var(--amarelo); transform: rotate(45deg); }
-
-  .botao { transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.15s ease, color 0.15s ease; }
-  .placa-seta svg { transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.5, 1); }
-
-  .linha-viva .estacao-trilho::before, .linha-viva .estacao-trilho::after { background: var(--linha-suave); transition: background-color 0.5s ease; }
-  .linha-viva .estacao.passou .estacao-trilho::before, .linha-viva .estacao.segue .estacao-trilho::after { background: var(--trilho); }
-  .linha-viva .estacao-atual .estacao-trilho::after, .linha-viva .estacao-futura .estacao-trilho::before { background: repeating-linear-gradient(to bottom, var(--trilho) 0 9px, transparent 9px 16px); }
-  .linha-viva .estacao-marca { border-color: var(--linha-suave); transition: border-color 0.4s ease, transform 0.45s cubic-bezier(0.3, 1.6, 0.5, 1); }
-  .linha-viva .estacao.passou .estacao-marca { border-color: var(--trilho); }
-  .linha-viva .estacao-atual .estacao-marca { border-color: var(--texto); }
-  .linha-viva .estacao.chegou .estacao-marca { transform: scale(1.18); }
-  .linha-viva .estacao-data, .linha-viva .estacao-corpo h3 { transition: color 0.4s ease; }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .abertura h1 .linha-nome > span { animation: subir 0.95s cubic-bezier(0.16, 1, 0.3, 1) both; }
-    .abertura h1 .linha-nome:nth-child(2) > span { animation-delay: 0.09s; }
-    .abertura h1 .linha-nome:nth-child(3) > span { animation-delay: 0.18s; }
-    .abertura-texto { animation: aparecer 0.8s 0.4s ease both; }
-    .letreiro-trilho { animation: correr 42s linear infinite; }
-    .letreiro:hover .letreiro-trilho { animation-play-state: paused; }
-    .placa-linha:hover .placa-seta svg, .placa-linha:focus-visible .placa-seta svg { transform: translateY(4px); }
-    .contato-lista a:hover .placa-seta svg, .contato-lista a:focus-visible .placa-seta svg { transform: scale(1.14); }
-    .registros tr.sumindo td { animation: sumir 0.18s ease forwards; }
-    .registros tr.surgindo td { animation: surgir 0.6s ease both; }
-    .horarios button.carimbo { animation: carimbo 0.45s cubic-bezier(0.3, 1.6, 0.5, 1); }
-    .horarios button.negado { animation: negar 0.4s ease; }
-    .grafico .ponto-previsao.pulso { transform-box: fill-box; transform-origin: center; animation: pulso 0.6s cubic-bezier(0.3, 1.6, 0.5, 1); }
-    @keyframes subir { from { transform: translateY(105%); } to { transform: none; } }
-    @keyframes aparecer { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-    @keyframes correr { to { transform: translateX(-50%); } }
-    @keyframes sumir { to { opacity: 0; } }
-    @keyframes surgir { from { opacity: 0; background-color: var(--amarelo); } 40% { opacity: 1; background-color: var(--amarelo); } to { opacity: 1; background-color: transparent; } }
-    @keyframes carimbo { 0% { transform: scale(0.85); } 60% { transform: scale(1.12); } 100% { transform: scale(1); } }
-    @keyframes negar { 20%, 60% { transform: translateX(-5px); } 40%, 80% { transform: translateX(5px); } }
-    @keyframes pulso { 0% { transform: scale(1); } 50% { transform: scale(1.8); } 100% { transform: scale(1); } }
-  }
-
-  @media (max-width: 900px) {
-    .abertura-inner, .projeto, .sobre-grid, .tecnico-grid { grid-template-columns: minmax(0, 1fr); }
-    .abertura-texto { max-width: 40ch; }
-  }
-  @media (max-width: 760px) {
-    .topo-nav { display: none; }
-    .ajustes-rotulo { display: none; }
-    .ajustes button.contraste span { display: none; }
-    .ajustes button.contraste { margin-left: 0.2rem; }
-    .competencias div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
-    .horarios { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .placa-destino { font-size: 1.45rem; }
-    .letreiro-rotulo { font-size: 0.95rem; }
-    .letreiro-trilho li { font-size: 1.25rem; }
-    .estacao { grid-template-columns: 2.4rem minmax(0, 1fr); column-gap: 0.9rem; }
-    .estacao-trilho { grid-column: 1; grid-row: 1 / span 2; }
-    .estacao-data { grid-column: 2; grid-row: 1; text-align: left; padding-top: 0.25rem; }
-    .estacao-corpo { grid-column: 2; grid-row: 2; padding-top: 0.1rem; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .previsao { transition: none; }
-  }
-</style>
+<script defer src="assets/vendor/gsap.min.js"></script>
+<script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+<script defer src="assets/vendor/SplitText.min.js"></script>
+<script defer src="assets/vendor/lenis.min.js"></script>
+<script defer src="assets/js/main.js"></script>
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="topo">
-  <a class="marca" href="#inicio" aria-label="Claudio Junior Alicati, início">CJ</a>
-  <nav class="topo-nav" aria-label="Seções">
-    <a href="#projetos">Projetos</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#trajetoria">Trajetória</a>
-    <a href="#contato">Contato</a>
+<header class="topo" data-topo>
+  <a class="marca" href="#inicio">
+    <span class="marca-nome">Claudio Junior Alicati</span>
+    <span class="marca-curta" aria-hidden="true">CJA</span>
+  </a>
+  <nav class="menu" aria-label="Seções">
+    <ul>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#trajetoria">Trajetória</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
   </nav>
-  <div class="ajustes">
-    <div class="ajustes" role="group" aria-label="Tamanho do texto">
-      <span class="ajustes-rotulo" aria-hidden="true">Texto</span>
-      <button type="button" data-escala="1" aria-pressed="true" aria-label="Texto em tamanho normal">A</button>
-      <button type="button" data-escala="1.125" aria-pressed="false" aria-label="Texto maior">A+</button>
-      <button type="button" data-escala="1.25" aria-pressed="false" aria-label="Texto bem maior">A++</button>
-    </div>
-    <button type="button" class="contraste" data-acao="contraste" aria-pressed="false" aria-label="Alto contraste escuro">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
-      <span>Contraste</span>
-    </button>
-  </div>
-  <span class="progresso" aria-hidden="true"></span>
 </header>
 
 <main id="conteudo">
-  <section class="abertura" id="inicio" aria-labelledby="nome">
-    <div class="abertura-inner">
+
+  <section class="hero" id="inicio" data-bg="#0B1631" aria-label="Apresentação">
+    <h1 class="hero-nome" data-hero-nome>
+      <span class="hero-linha"><span class="palavra">Claudio</span> <span class="palavra">Junior</span></span>
+      <span class="hero-linha"><span class="palavra">Alicati</span></span>
+    </h1>
+
+    <div class="hero-base">
+      <div class="hero-texto">
+        <p class="hero-intro" data-hero-intro>Desenvolvedor full stack. Crio sistemas web para negócios de verdade, com agendamento, pagamentos, finanças e controle de acesso, do banco de dados à interface.</p>
+        <div class="hero-acoes" data-hero-acoes>
+          <a class="botao botao-cheio" href="#projetos" data-magnetico>Ver projetos</a>
+          <a class="botao" href="#contato" data-magnetico>Contato</a>
+        </div>
+      </div>
+
+      <div class="hero-pilha" aria-hidden="true" data-hero-pilha>
+        <div class="pilha-cena">
+          <div class="pilha-janela pilha-tras"><img src="assets/img/clientflow-projetos-760.webp" alt="" width="760" height="365" decoding="async"></div>
+          <div class="pilha-janela pilha-meio"><img src="assets/img/leon-site-760.webp" alt="" width="760" height="365" decoding="async"></div>
+          <div class="pilha-janela pilha-frente"><img src="assets/img/atrium-admin-760.webp" alt="" width="760" height="365" decoding="async"></div>
+        </div>
+      </div>
+
+      <p class="hero-local" data-hero-local>
+        <span>Campo Limpo Paulista, SP</span>
+        <time data-relogio>--:--</time>
+      </p>
+    </div>
+  </section>
+
+  <section class="projetos" id="projetos" aria-labelledby="t-projetos">
+    <div class="abertura" data-bg="#0B1631">
+      <h2 class="titulo-secao" id="t-projetos" data-largura>Projetos</h2>
+      <p class="abertura-texto">Três sistemas publicados, cada um com link para abrir e conhecer.</p>
+    </div>
+
+    <article class="projeto projeto-atrium" id="atrium" data-bg="#0E2147" data-acento="#8DB4FF" aria-labelledby="t-atrium">
+      <header class="projeto-topo">
+        <h3 class="projeto-nome" id="t-atrium" data-largura>Atrium</h3>
+        <p class="projeto-resumo">Portal de clientes para agências pequenas</p>
+        <div class="projeto-links">
+          <a class="botao botao-acento" href="https://atrium-client-portal.vercel.app/" target="_blank" rel="noopener" data-magnetico>Abrir demonstração <svg class="icone" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg><span class="visualmente-oculto"> (abre em nova aba)</span></a>
+          <a class="botao" href="https://github.com/cjajunior/atrium" target="_blank" rel="noopener" data-magnetico>Ver código <svg class="icone" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg><span class="visualmente-oculto"> (abre em nova aba)</span></a>
+        </div>
+      </header>
+
+      <div class="palco">
+        <a class="janela" href="https://atrium-client-portal.vercel.app/" target="_blank" rel="noopener" tabindex="-1" data-inclinar data-cursor="Abrir">
+          <span class="janela-barra" aria-hidden="true"><span class="janela-pontos"></span><span class="janela-url">atrium-client-portal.vercel.app</span></span>
+          <span class="janela-tela" data-telas>
+            <img src="assets/img/atrium-admin.webp" srcset="assets/img/atrium-admin-760.webp 760w, assets/img/atrium-admin.webp 1366w" sizes="(min-width: 1260px) 1180px, 94vw" width="1366" height="656" loading="lazy" decoding="async" data-tela="ana" alt="Painel do Atrium visto pela Ana, dona da agência: pedidos abertos, clientes, plano e a lista do que precisa de atenção.">
+            <img src="assets/img/atrium-cliente.webp" srcset="assets/img/atrium-cliente-760.webp 760w, assets/img/atrium-cliente.webp 1366w" sizes="(min-width: 1260px) 1180px, 94vw" width="1366" height="656" loading="lazy" decoding="async" data-tela="clara" alt="O mesmo painel visto pela Clara, cliente: só os projetos e pedidos da empresa dela, sem clientes, equipe ou cobrança no menu." hidden>
+          </span>
+        </a>
+        <div class="alternador" role="group" aria-label="Ver o painel como" data-alternador>
+          <button type="button" aria-pressed="true" data-ver="ana">Ana, dona da agência</button>
+          <button type="button" aria-pressed="false" data-ver="clara">Clara, cliente</button>
+          <span class="alternador-marca" aria-hidden="true"></span>
+        </div>
+        <p class="legenda" aria-live="polite" data-legenda>A Ana vê todos os clientes, a equipe e a cobrança da agência.</p>
+      </div>
+
+      <div class="projeto-detalhes">
+        <p class="detalhe-texto">Projetos, pedidos e cobrança de uma agência em um só lugar, com três perfis: dono, equipe e cliente. As permissões ficam no PostgreSQL, com Row Level Security, e não em botões escondidos na tela. A demonstração tem contas prontas para testar cada perfil, sem cadastro.</p>
+        <div class="detalhe-bloco">
+          <h4>Destaques técnicos</h4>
+          <ul class="destaques">
+            <li>Row Level Security no PostgreSQL definindo o que cada perfil pode ler e alterar</li>
+            <li>Cobrança com Stripe</li>
+            <li>Testes automatizados de cada perfil com Vitest</li>
+          </ul>
+        </div>
+        <div class="detalhe-bloco">
+          <h4>Tecnologias</h4>
+          <p>Next.js, TypeScript, Supabase, PostgreSQL, Stripe, Tailwind CSS e Vitest.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="projeto projeto-leon" id="leon" data-bg="#1B140B" data-acento="#D9A75E" aria-labelledby="t-leon">
+      <header class="projeto-topo">
+        <h3 class="projeto-nome" id="t-leon" data-largura>Leon Barber Shop</h3>
+        <p class="projeto-resumo">Site e agenda on-line de uma barbearia de verdade</p>
+        <div class="projeto-links">
+          <a class="botao botao-acento" href="https://leon-barbearia.vercel.app/" target="_blank" rel="noopener" data-magnetico>Visitar o site <svg class="icone" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg><span class="visualmente-oculto"> (abre em nova aba)</span></a>
+        </div>
+      </header>
+
+      <div class="palco palco-leon">
+        <a class="janela" href="https://leon-barbearia.vercel.app/" target="_blank" rel="noopener" tabindex="-1" data-inclinar data-cursor="Abrir">
+          <span class="janela-barra" aria-hidden="true"><span class="janela-pontos"></span><span class="janela-url">leon-barbearia.vercel.app</span></span>
+          <span class="janela-tela">
+            <img src="assets/img/leon-site.webp" srcset="assets/img/leon-site-760.webp 760w, assets/img/leon-site.webp 1366w" sizes="(min-width: 1260px) 1010px, 82vw" width="1366" height="656" loading="lazy" decoding="async" alt="Página inicial da Leon Barber Shop no computador: título “Mais que um corte. Uma assinatura.”, botão para reservar horário e foto do barbeiro atendendo.">
+          </span>
+        </a>
+        <figure class="celular" data-paralaxe="14">
+          <span class="celular-tela">
+            <img src="assets/img/leon-celular.webp" width="390" height="844" loading="lazy" decoding="async" alt="A mesma página no celular, com o botão de reservar horário logo na primeira tela.">
+          </span>
+        </figure>
+      </div>
+
+      <div class="projeto-detalhes">
+        <p class="detalhe-texto">Projeto voluntário para uma barbearia de Campo Limpo Paulista. O cliente agenda pelo celular escolhendo serviço, dia e horário, e o dono cuida da agenda, dos serviços e das finanças em um painel próprio, com receitas, despesas, lucro e previsão para os próximos 30 dias.</p>
+        <div class="detalhe-bloco">
+          <h4>Destaques técnicos</h4>
+          <ul class="destaques">
+            <li>Agendamento que não deixa marcar dois clientes no mesmo horário</li>
+            <li>Painel do dono com receitas, despesas, lucro e previsão de 30 dias</li>
+            <li>Feito primeiro para o celular, onde os clientes agendam</li>
+          </ul>
+        </div>
+        <div class="detalhe-bloco">
+          <h4>Tecnologias</h4>
+          <p>React, TypeScript, Vite, Supabase e PostgreSQL.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="projeto projeto-clientflow" id="clientflow" data-bg="#0C241B" data-acento="#D9F99D" aria-labelledby="t-clientflow">
+      <header class="projeto-topo">
+        <h3 class="projeto-nome" id="t-clientflow" data-largura>ClientFlow</h3>
+        <p class="projeto-resumo">Clientes, projetos e finanças para quem presta serviço</p>
+        <div class="projeto-links">
+          <a class="botao botao-acento" href="https://clientflow-pi-gray.vercel.app/" target="_blank" rel="noopener" data-magnetico>Abrir demonstração <svg class="icone" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg><span class="visualmente-oculto"> (abre em nova aba)</span></a>
+        </div>
+      </header>
+
+      <div class="palco palco-clientflow">
+        <div class="janela janela-fundo" data-paralaxe="10" aria-hidden="true">
+          <span class="janela-barra"><span class="janela-pontos"></span><span class="janela-url">clientflow-pi-gray.vercel.app</span></span>
+          <span class="janela-tela"><img src="assets/img/clientflow-inicio-760.webp" width="760" height="365" loading="lazy" decoding="async" alt=""></span>
+        </div>
+        <a class="janela janela-frente" href="https://clientflow-pi-gray.vercel.app/" target="_blank" rel="noopener" tabindex="-1" data-inclinar data-cursor="Abrir">
+          <span class="janela-barra" aria-hidden="true"><span class="janela-pontos"></span><span class="janela-url">clientflow-pi-gray.vercel.app/projetos</span></span>
+          <span class="janela-tela">
+            <img src="assets/img/clientflow-projetos.webp" srcset="assets/img/clientflow-projetos-760.webp 760w, assets/img/clientflow-projetos.webp 1366w" sizes="(min-width: 1260px) 1010px, 86vw" width="1366" height="656" loading="lazy" decoding="async" alt="Quadro de projetos do ClientFlow com as etapas planejamento, em andamento, revisão e concluídos, cada projeto com valor, prazo e progresso.">
+          </span>
+        </a>
+      </div>
+
+      <div class="projeto-detalhes">
+        <p class="detalhe-texto">Sistema de gestão para freelancers e pequenos negócios: clientes, quadro de projetos por etapa, tarefas, faturas e fluxo de caixa com gráficos. Funciona em português e em inglês, e a demonstração usa dados fictícios, sem cadastro.</p>
+        <div class="detalhe-bloco">
+          <h4>Destaques técnicos</h4>
+          <ul class="destaques">
+            <li>Faturas, despesas e lucro calculados automaticamente</li>
+            <li>Quadro de projetos com valor, prazo e progresso de cada entrega</li>
+            <li>Interface em português e em inglês</li>
+          </ul>
+        </div>
+        <div class="detalhe-bloco">
+          <h4>Tecnologias</h4>
+          <p>Next.js, React, TypeScript, Supabase, Tailwind CSS e Recharts.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="sobre" id="sobre" data-bg="#0B1631" aria-labelledby="t-sobre">
+    <h2 class="titulo-secao" id="t-sobre" data-largura>Sobre</h2>
+    <p class="declaracao" data-revelar>Programo desde os 16 anos e trabalho no suporte técnico de uma empresa de software. Ver todo dia onde um sistema trava mudou meu jeito de programar: penso primeiro em quem vai usar e no que pode dar errado.</p>
+    <dl class="fatos">
       <div>
-        <h1 id="nome"><span class="linha-nome"><span>Claudio</span></span> <span class="linha-nome"><span>Junior</span></span> <span class="linha-nome"><span>Alicati</span></span></h1>
-        <p class="abertura-texto">Desenvolvedor web em Campo Limpo Paulista (SP). Faço sistemas para pequenos negócios, como portal de clientes, agendamento e gestão financeira, com React, Next.js, TypeScript e Supabase.</p>
+        <dt>Formação</dt>
+        <dd>Análise e Desenvolvimento de Sistemas na UNIP, com conclusão prevista para julho de 2027.</dd>
       </div>
-      <nav class="placa" aria-label="Atalhos da página">
-        <p class="placa-topo"><span class="ponto-aqui" aria-hidden="true"></span>Você está no portfólio do Claudio. Escolha um destino:</p>
-        <a class="placa-linha" href="#projetos">
-          <span class="placa-seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5.5 12.5 12 19l6.5-6.5"/></svg></span>
-          <span class="placa-destino">Projetos</span>
-          <span class="placa-detalhe">Três sistemas no ar, com demonstração</span>
-        </a>
-        <a class="placa-linha" href="#trajetoria">
-          <span class="placa-seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5.5 12.5 12 19l6.5-6.5"/></svg></span>
-          <span class="placa-destino">Trajetória</span>
-          <span class="placa-detalhe">Estudos, suporte e formação em ADS</span>
-        </a>
-        <a class="placa-linha" href="#contato">
-          <span class="placa-seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M5.5 12.5 12 19l6.5-6.5"/></svg></span>
-          <span class="placa-destino">Contato</span>
-          <span class="placa-detalhe">E-mail, LinkedIn e GitHub</span>
-        </a>
-      </nav>
-    </div>
+      <div>
+        <dt>No dia a dia</dt>
+        <dd>TypeScript, React, Next.js, Supabase, PostgreSQL e SQL.</dd>
+      </div>
+      <div>
+        <dt>Em estudo</dt>
+        <dd>Java e Kotlin, desde 2023.</dd>
+      </div>
+      <div>
+        <dt>Suporte e infraestrutura</dt>
+        <dd>Linux, Windows Server, Active Directory, redes e atendimento a usuários.</dd>
+      </div>
+    </dl>
   </section>
 
-  <div class="letreiro" role="region" aria-label="Tecnologias que uso">
-    <span class="letreiro-rotulo" aria-hidden="true">Tecnologias</span>
-    <div class="letreiro-janela">
-      <ul class="letreiro-trilho"><li>React</li><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Stripe</li><li>Tailwind CSS</li><li>Vitest</li><li>Java</li><li>Kotlin</li><li>SQL</li><li>Linux</li><li aria-hidden="true">React</li><li aria-hidden="true">Next.js</li><li aria-hidden="true">TypeScript</li><li aria-hidden="true">Supabase</li><li aria-hidden="true">PostgreSQL</li><li aria-hidden="true">Stripe</li><li aria-hidden="true">Tailwind CSS</li><li aria-hidden="true">Vitest</li><li aria-hidden="true">Java</li><li aria-hidden="true">Kotlin</li><li aria-hidden="true">SQL</li><li aria-hidden="true">Linux</li></ul>
+  <div class="faixa" data-bg="#0B1631" aria-hidden="true">
+    <div class="faixa-trilho" data-faixa>
+      <span>React</span><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span><span>Stripe</span><span>Tailwind CSS</span><span>Vitest</span><span>Java</span><span>Kotlin</span><span>SQL</span><span>Linux</span>
     </div>
   </div>
 
-  <section class="secao" id="projetos" aria-labelledby="t-projetos">
-    <div class="secao-inner">
-      <h2 id="t-projetos">Projetos</h2>
-      <p class="intro">Três sistemas publicados, cada um para um tipo de negócio. Cada projeto tem uma demonstração com dados de exemplo e um botão para abrir a versão real.</p>
-
-      <article class="projeto" aria-labelledby="p-atrium">
-        <div>
-          <h3 id="p-atrium">Atrium</h3>
-          <p class="projeto-foco">Segurança por perfil, pagamentos e testes</p>
-          <p class="projeto-resumo">Portal de clientes para pequenas agências: projetos, solicitações e cobrança no mesmo lugar, com três perfis de acesso.</p>
-          <ul class="destaques">
-            <li>O controle de acesso fica no banco, com Row Level Security no PostgreSQL. Cada cliente recebe só os dados da própria empresa.</li>
-            <li>As notas internas da equipe nunca chegam ao navegador do cliente.</li>
-            <li>Assinatura com Stripe Checkout, portal de cobrança e webhook assinado.</li>
-            <li>Testes automatizados que entram como cada perfil em um PostgreSQL real.</li>
-          </ul>
-          <p class="feito-com">Feito com Next.js, TypeScript, Supabase, Stripe, Tailwind CSS e Vitest.</p>
-          <div class="acoes">
-            <a class="botao botao-principal" href="https://atrium-client-portal.vercel.app/">Abrir demo do Atrium</a>
-            <a class="botao" href="https://github.com/cjajunior/atrium">Ver código</a>
-          </div>
-        </div>
-        <figure class="demo" aria-labelledby="leg-atrium">
-          <div class="demo-tela" data-demo="atrium">
-            <p class="demo-titulo" id="ver-como">Ver o portal como:</p>
-            <div class="escolhas" role="group" aria-labelledby="ver-como">
-              <button type="button" data-perfil="admin" aria-pressed="true">Ana, admin</button>
-              <button type="button" data-perfil="equipe" aria-pressed="false">Theo, equipe</button>
-              <button type="button" data-perfil="cliente" aria-pressed="false">Clara, cliente</button>
-            </div>
-            <table class="registros">
-              <caption class="sr-only">Registros que o perfil escolhido recebe</caption>
-              <thead><tr><th scope="col">Registro</th><th scope="col">Empresa</th></tr></thead>
-              <tbody>
-                <tr data-empresa="norte"><td>Nova página de produtos</td><td>Norte Café</td></tr>
-                <tr data-empresa="vila"><td>Ajuste no logotipo</td><td>Vila Doce</td></tr>
-                <tr data-empresa="norte"><td>Fatura de novembro</td><td>Norte Café</td></tr>
-                <tr data-empresa="norte" data-interna><td>Pedir mais prazo ao cliente <span class="marcador-interno">interna</span></td><td>Norte Café</td></tr>
-                <tr data-empresa="vila" data-interna><td>Revisar o orçamento <span class="marcador-interno">interna</span></td><td>Vila Doce</td></tr>
-              </tbody>
-            </table>
-            <p class="demo-status" aria-live="polite">Ana vê 5 de 5 registros, inclusive as notas internas.</p>
-          </div>
-          <figcaption id="leg-atrium">Demonstração com dados de exemplo. Troque o perfil para ver o que cada pessoa recebe do banco. Clara é cliente da Norte Café.</figcaption>
-        </figure>
-      </article>
-
-      <article class="projeto" aria-labelledby="p-leon">
-        <div>
-          <h3 id="p-leon">Leon Barber Shop</h3>
-          <p class="projeto-foco">Agenda e finanças para um cliente real</p>
-          <p class="projeto-resumo">Site de agendamento e painel do dono para uma barbearia de Campo Limpo Paulista, feito como trabalho voluntário.</p>
-          <ul class="destaques">
-            <li>Agendamento pelo celular, com proteção contra horários duplicados.</li>
-            <li>Painel do dono com status dos agendamentos, serviços e preços.</li>
-            <li>Receitas, despesas, lucro e previsão financeira de 30 dias com base nos agendamentos.</li>
-          </ul>
-          <p class="feito-com">Feito com React, TypeScript, Vite, Supabase e PostgreSQL.</p>
-          <div class="acoes">
-            <a class="botao botao-principal" href="https://leon-barbearia.vercel.app/">Abrir site da barbearia</a>
-          </div>
-        </div>
-        <figure class="demo" aria-labelledby="leg-leon">
-          <div class="demo-tela" data-demo="leon">
-            <div class="linha-demo">
-              <p class="demo-titulo" id="horarios-titulo">Corte de cabelo, sábado</p>
-              <button type="button" class="demo-botao discreto" data-acao="recomecar">Recomeçar</button>
-            </div>
-            <div class="horarios" role="group" aria-labelledby="horarios-titulo">
-              <button type="button" data-hora="09:00">09:00</button>
-              <button type="button" data-hora="09:30" aria-disabled="true">09:30</button>
-              <button type="button" data-hora="10:00">10:00</button>
-              <button type="button" data-hora="10:30">10:30</button>
-              <button type="button" data-hora="11:00" aria-disabled="true">11:00</button>
-              <button type="button" data-hora="11:30">11:30</button>
-              <button type="button" data-hora="13:00">13:00</button>
-              <button type="button" data-hora="13:30" aria-disabled="true">13:30</button>
-              <button type="button" data-hora="14:00">14:00</button>
-              <button type="button" data-hora="14:30">14:30</button>
-              <button type="button" data-hora="15:00" aria-disabled="true">15:00</button>
-              <button type="button" data-hora="15:30">15:30</button>
-            </div>
-            <p class="demo-status" aria-live="polite">Escolha um horário livre. Os riscados já estão ocupados.</p>
-          </div>
-          <figcaption id="leg-leon">Demonstração com dados de exemplo. Reserve um horário e tente reservar o mesmo de novo.</figcaption>
-        </figure>
-      </article>
-
-      <article class="projeto" aria-labelledby="p-clientflow">
-        <div>
-          <h3 id="p-clientflow">ClientFlow</h3>
-          <p class="projeto-foco">Dados financeiros e previsão de caixa</p>
-          <p class="projeto-resumo">Sistema de gestão para freelancers e pequenos negócios: clientes, projetos, tarefas, faturas e fluxo de caixa no mesmo lugar, em vez de planilhas soltas.</p>
-          <ul class="destaques">
-            <li>Funil de clientes, projetos e tarefas com prazos.</li>
-            <li>Faturas, gráficos de receitas e despesas e previsão de caixa.</li>
-            <li>Interface em português e inglês.</li>
-            <li>Área de demonstração com dados de exemplo, sem cadastro.</li>
-          </ul>
-          <p class="feito-com">Feito com Next.js, React, TypeScript, Supabase, Tailwind CSS, Recharts e Vitest.</p>
-          <div class="acoes">
-            <a class="botao botao-principal" href="https://clientflow-pi-gray.vercel.app/">Abrir demo do ClientFlow</a>
-          </div>
-        </div>
-        <figure class="demo" aria-labelledby="leg-clientflow">
-          <div class="demo-tela" data-demo="clientflow">
-            <div class="linha-demo">
-              <p class="demo-titulo">Saldo em caixa por semana</p>
-              <button type="button" class="demo-botao discreto" data-acao="previsao" aria-pressed="false">Mostrar previsão</button>
-            </div>
-            <div class="grafico">
-              <svg viewBox="0 0 360 190" role="img" aria-labelledby="graf-titulo graf-desc">
-                <title id="graf-titulo">Saldo em caixa por semana, com previsão</title>
-                <defs><clipPath id="corte-previsao"><rect id="corte-rect" x="200" y="0" width="160" height="190"/></clipPath></defs>
-                <desc id="graf-desc">Dados de exemplo. O saldo sobe de 4.200 reais na semana 1 para 7.400 reais na semana 6. A previsão chega a 9.300 reais na semana 10.</desc>
-                <line class="grade" x1="44" y1="122" x2="350" y2="122"/>
-                <line class="grade" x1="44" y1="84" x2="350" y2="84"/>
-                <line class="grade" x1="44" y1="46" x2="350" y2="46"/>
-                <line class="eixo" x1="44" y1="160" x2="350" y2="160"/>
-                <text x="38" y="164" text-anchor="end">0</text>
-                <text x="38" y="126" text-anchor="end">2,5</text>
-                <text x="38" y="88" text-anchor="end">5</text>
-                <text x="38" y="50" text-anchor="end">7,5</text>
-                <text x="4" y="14" class="rotulo-forte">R$ mil</text>
-                <line class="hoje" x1="214" y1="20" x2="214" y2="160"/>
-                <text x="218" y="28" class="rotulo-forte">Hoje</text>
-                <polyline class="serie" points="44,96.2 78,82.5 112,90.1 146,68.8 180,56.6 214,47.5"/>
-                <circle class="ponto" cx="44" cy="96.2" r="3.5"/><circle class="ponto" cx="78" cy="82.5" r="3.5"/><circle class="ponto" cx="112" cy="90.1" r="3.5"/>
-                <circle class="ponto" cx="146" cy="68.8" r="3.5"/><circle class="ponto" cx="180" cy="56.6" r="3.5"/><circle class="ponto" cx="214" cy="47.5" r="4.5"/>
-                <g class="previsao" data-oculta="true" clip-path="url(#corte-previsao)">
-                  <polyline class="serie-previsao" points="214,47.5 248,39.9 282,29.3 316,36.9 350,18.6"/>
-                  <circle class="ponto-previsao" cx="350" cy="18.6" r="4.5"/>
-                </g>
-                <text x="44" y="180" text-anchor="middle">S1</text>
-                <text x="112" y="180" text-anchor="middle">S3</text>
-                <text x="180" y="180" text-anchor="middle">S5</text>
-                <text x="248" y="180" text-anchor="middle">S7</text>
-                <text x="316" y="180" text-anchor="middle">S9</text>
-              </svg>
-            </div>
-            <div class="legenda" aria-hidden="true">
-              <span><i></i>Saldo real</span>
-              <span><i class="tracejado"></i>Previsão</span>
-            </div>
-            <p class="demo-status" aria-live="polite">Saldo hoje: R$ 7.400.</p>
-          </div>
-          <figcaption id="leg-clientflow">Demonstração com dados de exemplo. Mostre a previsão para ver o saldo das próximas semanas.</figcaption>
-        </figure>
-      </article>
-    </div>
+  <section class="trajetoria" id="trajetoria" data-bg="#0B1631" aria-labelledby="t-trajetoria">
+    <h2 class="titulo-secao" id="t-trajetoria" data-largura>Trajetória</h2>
+    <ol class="linha-tempo" data-linha-tempo>
+      <li>
+        <time datetime="2022">2022</time>
+        <div><h3>Google Cloud Skills Boost</h3><p>Quatro certificados de fundamentos: computação em nuvem, infraestrutura, dados, machine learning e IA.</p></div>
+      </li>
+      <li>
+        <time datetime="2023">2023</time>
+        <div><h3>Java e Kotlin</h3><p>Quatro cursos na Alura e os codelabs de Kotlin do Google Developer Student Clubs.</p></div>
+      </li>
+      <li>
+        <time datetime="2024-01">jan. 2024</time>
+        <div><h3>Mercado Livre</h3><p>Auxiliar logístico em Cajamar, numa operação de alto volume de pedidos.</p></div>
+      </li>
+      <li>
+        <time datetime="2024-07">jul. 2024</time>
+        <div><h3>UNIP</h3><p>Início do curso de Análise e Desenvolvimento de Sistemas.</p></div>
+      </li>
+      <li>
+        <time datetime="2025-04">abr. 2025</time>
+        <div><h3>PHERFIL</h3><p>Estágio em suporte de TI em Jundiaí: hardware, Active Directory, Windows Server e chamados.</p></div>
+      </li>
+      <li class="atual">
+        <time datetime="2025-08">ago. 2025 até hoje</time>
+        <div><h3>Alpha7 Desenvolvimento de Software</h3><p>Helpdesk remoto: atendimento por telefone e chat, acesso remoto, Linux e SQL.</p></div>
+      </li>
+      <li>
+        <time datetime="2026">2026</time>
+        <div><h3>Projetos no ar</h3><p>Leon Barber Shop, ClientFlow e Atrium publicados, cada um com link aberto.</p></div>
+      </li>
+      <li class="futuro">
+        <time datetime="2027-07">jul. 2027</time>
+        <div><h3>Formatura prevista</h3><p>Conclusão de Análise e Desenvolvimento de Sistemas.</p></div>
+      </li>
+    </ol>
   </section>
 
-  <section class="secao sobre" id="sobre" aria-labelledby="t-sobre">
-    <div class="secao-inner sobre-grid">
-      <div class="sobre-texto">
-        <h2 id="t-sobre">Sobre mim</h2>
-        <p>Programo desde os 16 anos. Hoje trabalho no suporte da Alpha7 Desenvolvimento de Software, empresa de sistemas para farmácias. Atendo clientes por telefone e chat, identifico a causa dos problemas e oriento o uso dos sistemas.</p>
-        <p>Curso Análise e Desenvolvimento de Sistemas na UNIP e estudo Java e Kotlin desde 2023. Nos meus projetos uso React, Next.js, TypeScript e Supabase.</p>
-        <p>Sou PcD, com visão monocular. Este site usa a Atkinson Hyperlegible, fonte criada pelo Braille Institute para leitura com baixa visão. No topo da página dá para aumentar o texto e ligar o alto contraste.</p>
+  <section class="contato" id="contato" data-bg="#3ED6B5" data-tema="claro" aria-labelledby="t-contato">
+    <h2 class="contato-titulo" id="t-contato" data-largura>Fale comigo</h2>
+    <div class="contato-corpo">
+      <a class="contato-email" href="mailto:claudiojunioralicate@gmail.com">claudiojunioralicate<wbr>@gmail.com</a>
+      <p class="contato-nota">Respondo por e-mail ou pelo LinkedIn.</p>
+      <div class="contato-acoes">
+        <button class="botao botao-escuro" type="button" data-copiar="claudiojunioralicate@gmail.com" data-magnetico>Copiar e-mail</button>
+        <a class="botao botao-linha" href="https://www.linkedin.com/in/claudio-junior-a69ba6246/" target="_blank" rel="noopener" data-magnetico>LinkedIn <svg class="icone" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg><span class="visualmente-oculto"> (abre em nova aba)</span></a>
+        <a class="botao botao-linha" href="https://github.com/cjajunior" target="_blank" rel="noopener" data-magnetico>GitHub <svg class="icone" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg><span class="visualmente-oculto"> (abre em nova aba)</span></a>
       </div>
-      <dl class="fatos">
-        <div><dt>Moro em</dt><dd>Campo Limpo Paulista, SP</dd></div>
-        <div><dt>Trabalho</dt><dd>Helpdesk na Alpha7 Desenvolvimento de Software</dd></div>
-        <div><dt>Estudo</dt><dd>Análise e Desenvolvimento de Sistemas, UNIP</dd></div>
-        <div><dt>Idiomas</dt><dd>Português nativo. Inglês: compreensão oral.</dd></div>
-      </dl>
+      <p class="copiar-status" role="status" data-copiar-status></p>
     </div>
+    <footer class="rodape">
+      <p>Claudio Junior Alicati, 2026</p>
+      <a href="https://github.com/cjajunior/cjajunior.github.io" target="_blank" rel="noopener">Código deste site<span class="visualmente-oculto"> (abre em nova aba)</span></a>
+    </footer>
   </section>
 
-  <section class="secao" id="trajetoria" aria-labelledby="t-trajetoria">
-    <div class="secao-inner">
-      <h2 id="t-trajetoria">Trajetória</h2>
-      <p class="intro">Do primeiro certificado aos sistemas no ar, estação por estação.</p>
-      <ol class="linha-trajetoria">
-        <li class="estacao">
-          <p class="estacao-data">2022</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Primeiros certificados</h3>
-            <p>Quatro certificados de fundamentos de nuvem no Google Cloud Skills Boost.</p>
-          </div>
-        </li>
-        <li class="estacao">
-          <p class="estacao-data">2023</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Java e Kotlin</h3>
-            <p>Cursos de Java e Kotlin na Alura e codelabs no Google Developer Student Clubs.</p>
-          </div>
-        </li>
-        <li class="estacao">
-          <p class="estacao-data">jan. 2024</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Auxiliar logístico no Mercado Livre</h3>
-            <p>Separação e conferência de pedidos em operação de alto volume, em Cajamar (SP), até setembro de 2024.</p>
-          </div>
-        </li>
-        <li class="estacao">
-          <p class="estacao-data">jul. 2024</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Começo da faculdade</h3>
-            <p>Análise e Desenvolvimento de Sistemas na UNIP, em EAD.</p>
-          </div>
-        </li>
-        <li class="estacao">
-          <p class="estacao-data">abr. 2025</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Estágio de suporte em TI na PHERFIL / PHERFILTEC</h3>
-            <p>Active Directory, Windows Server, manutenção de hardware, backup e atendimento de chamados, em Jundiaí (SP), até junho de 2025.</p>
-          </div>
-        </li>
-        <li class="estacao">
-          <p class="estacao-data">ago. 2025</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Helpdesk na Alpha7 Desenvolvimento de Software</h3>
-            <p>Suporte a clientes de farmácias por telefone e chat, acesso remoto, registro de chamados, Linux e SQL. Trabalho remoto.</p>
-          </div>
-        </li>
-        <li class="estacao estacao-atual">
-          <p class="estacao-data">Hoje</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Três sistemas web no ar</h3>
-            <p>Leon Barber Shop, ClientFlow e Atrium, feitos com React, Next.js, TypeScript e Supabase.</p>
-          </div>
-        </li>
-        <li class="estacao estacao-futura">
-          <p class="estacao-data">jul. 2027</p>
-          <span class="estacao-trilho" aria-hidden="true"><span class="estacao-marca"></span></span>
-          <div class="estacao-corpo">
-            <h3>Formatura prevista</h3>
-            <p>Tecnólogo em Análise e Desenvolvimento de Sistemas pela UNIP.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="secao tecnico" aria-labelledby="t-tecnico">
-    <div class="secao-inner">
-      <h2 id="t-tecnico">Competências e certificações</h2>
-      <div class="tecnico-grid">
-        <div>
-          <h3>Competências</h3>
-          <dl class="competencias">
-            <div><dt>Linguagens</dt><dd>TypeScript, JavaScript, Java, Kotlin e SQL</dd></div>
-            <div><dt>Front-end</dt><dd>React, Next.js, Vite e Tailwind CSS</dd></div>
-            <div><dt>Back-end e dados</dt><dd>Supabase (Auth e Row Level Security), PostgreSQL e Stripe</dd></div>
-            <div><dt>Qualidade e entrega</dt><dd>Vitest, Git, GitHub e Vercel</dd></div>
-            <div><dt>Infraestrutura</dt><dd>Linux, Windows Server, Active Directory e redes</dd></div>
-          </dl>
-        </div>
-        <div>
-          <h3>Certificações</h3>
-          <ul class="certificados">
-            <li><strong>Alura, 2023</strong>
-              <ul>
-                <li>Java e java.util: Coleções, Wrappers e Lambda expressions</li>
-                <li>Java e java.lang: programe com a classe Object e String</li>
-                <li>Kotlin: herança, polimorfismo e Interface</li>
-                <li>Kotlin: recursos da linguagem com pacotes e composição</li>
-              </ul>
-            </li>
-            <li><strong>Google Developer Student Clubs (DTU), 2023</strong>
-              <ul>
-                <li>25 codelabs</li>
-                <li>Mais conceitos fundamentais do Kotlin</li>
-              </ul>
-            </li>
-            <li><strong>Google Cloud Skills Boost, 2022</strong>
-              <ul>
-                <li>Google Cloud Computing Foundations: Cloud Computing Fundamentals</li>
-                <li>Create and Manage Cloud Resources</li>
-                <li>Perform Foundational Infrastructure Tasks in Google Cloud</li>
-                <li>Perform Foundational Data, ML, and AI Tasks in Google Cloud</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="secao contato" id="contato" aria-labelledby="t-contato">
-    <div class="secao-inner">
-      <h2 id="t-contato">Vamos conversar?</h2>
-      <p class="intro">Respondo por e-mail e pelo LinkedIn. O código dos projetos está no GitHub.</p>
-      <ul class="contato-lista">
-        <li><a href="mailto:claudiojunioralicate@gmail.com">
-          <span class="placa-seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg></span>
-          <span class="rotulo">E-mail</span>
-          <span class="valor">claudiojunioralicate@gmail.com</span>
-        </a></li>
-        <li><a href="https://www.linkedin.com/in/claudio-junior-a69ba6246/">
-          <span class="placa-seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v10.5h-3zM6 4.2a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.45h.04c.4-.76 1.39-1.56 2.86-1.56 3.06 0 3.62 2 3.62 4.62v5.99h-3v-5.31c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.81v5.4H10z"/></svg></span>
-          <span class="rotulo">LinkedIn</span>
-          <span class="valor">linkedin.com/in/claudio-junior-a69ba6246</span>
-        </a></li>
-        <li><a href="https://github.com/cjajunior">
-          <span class="placa-seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.6c-2.64.57-3.2-1.27-3.2-1.27-.43-1.1-1.06-1.39-1.06-1.39-.86-.59.07-.58.07-.58.95.07 1.45.98 1.45.98.85 1.45 2.22 1.03 2.76.79.09-.61.33-1.03.6-1.27-2.11-.24-4.33-1.05-4.33-4.7 0-1.04.37-1.89.98-2.55-.1-.24-.42-1.21.09-2.52 0 0 .8-.26 2.61.97a9.1 9.1 0 0 1 4.75 0c1.81-1.23 2.61-.97 2.61-.97.51 1.31.19 2.28.09 2.52.61.66.98 1.51.98 2.55 0 3.660-2.23 4.46-4.35 4.7.34.29.65.87.65 1.76v2.6c0 .26.17.55.66.46A9.5 9.5 0 0 0 12 2.5z"/></svg></span>
-          <span class="rotulo">GitHub</span>
-          <span class="valor">github.com/cjajunior</span>
-        </a></li>
-      </ul>
-      <div class="copiar">
-        <button type="button" class="botao" id="copiar-email" data-copiar="claudiojunioralicate@gmail.com">Copiar e-mail</button>
-        <p class="copiar-status" aria-live="polite"></p>
-      </div>
-    </div>
-  </section>
 </main>
-
-<footer class="rodape">
-  <div class="rodape-inner">
-    <p>© 2026 Claudio Junior Alicati. Atualizado em novembro de 2026.</p>
-    <p>Texto em Atkinson Hyperlegible Next, sob a licença SIL Open Font License.</p>
-  </div>
-</footer>
-
-<script>
-(function () {
-  var raiz = document.documentElement;
-  var reduzMovimento = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  var ponteiroFino = !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
-
-  function animarUmaVez(el, classe) {
-    if (reduzMovimento) { return; }
-    el.classList.remove(classe);
-    void el.offsetWidth;
-    el.classList.add(classe);
-    el.addEventListener('animationend', function fim() { el.classList.remove(classe); el.removeEventListener('animationend', fim); });
-  }
-
-  // Placa: letras trocando como num painel de aeroporto
-  var letrasMai = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var letrasMin = 'abcdefghijklmnopqrstuvwxyz';
-  function embaralhar(el, atraso) {
-    var final = el.textContent;
-    var inicio = null;
-    var duracao = 700;
-    function quadro(t) {
-      if (inicio === null) { inicio = t; }
-      var p = (t - inicio - atraso) / duracao;
-      if (p >= 1) { el.textContent = final; return; }
-      var fixas = p < 0 ? 0 : Math.floor(p * final.length);
-      var texto = '';
-      for (var i = 0; i < final.length; i++) {
-        var c = final.charAt(i);
-        if (i < fixas || c === ' ') { texto += c; continue; }
-        var fonte = c === c.toLowerCase() ? letrasMin : letrasMai;
-        texto += fonte.charAt(Math.floor(Math.random() * fonte.length));
-      }
-      el.textContent = texto;
-      window.requestAnimationFrame(quadro);
-    }
-    window.requestAnimationFrame(quadro);
-  }
-  document.querySelectorAll('.placa-linha').forEach(function (linha, i) {
-    var destino = linha.querySelector('.placa-destino');
-    var detalhe = linha.querySelector('.placa-detalhe');
-    linha.setAttribute('aria-label', destino.textContent + ': ' + detalhe.textContent);
-    if (!reduzMovimento) { embaralhar(destino, 250 + i * 150); }
-  });
-
-  // Luz que acompanha o mouse no topo
-  var abertura = document.querySelector('.abertura');
-  if (abertura && ponteiroFino) {
-    abertura.addEventListener('pointermove', function (e) {
-      var r = abertura.getBoundingClientRect();
-      abertura.style.setProperty('--luz-x', (e.clientX - r.left) + 'px');
-      abertura.style.setProperty('--luz-y', (e.clientY - r.top) + 'px');
-      abertura.style.setProperty('--luz-opacidade', '1');
-    });
-    abertura.addEventListener('pointerleave', function () { abertura.style.setProperty('--luz-opacidade', '0'); });
-  }
-
-  // Botões magnéticos
-  if (ponteiroFino && !reduzMovimento) {
-    document.querySelectorAll('.botao').forEach(function (b) {
-      b.addEventListener('pointermove', function (e) {
-        var r = b.getBoundingClientRect();
-        var x = (e.clientX - r.left - r.width / 2) / r.width;
-        var y = (e.clientY - r.top - r.height / 2) / r.height;
-        b.style.transform = 'translate(' + (x * 10).toFixed(1) + 'px, ' + (y * 7).toFixed(1) + 'px)';
-      });
-      b.addEventListener('pointerleave', function () { b.style.transform = ''; });
-    });
-  }
-
-  // Barra de progresso e linha da trajetória
-  var topo = document.querySelector('.topo');
-  var linhaTrajetoria = document.querySelector('.linha-trajetoria');
-  var estacoes = linhaTrajetoria ? Array.prototype.slice.call(linhaTrajetoria.querySelectorAll('.estacao')) : [];
-  if (linhaTrajetoria) { linhaTrajetoria.classList.add('linha-viva'); }
-  var agendado = false;
-  function atualizarRolagem() {
-    agendado = false;
-    var maximo = document.documentElement.scrollHeight - window.innerHeight;
-    var progresso = maximo > 0 ? Math.min(1, Math.max(0, window.scrollY / maximo)) : 0;
-    topo.style.setProperty('--progresso', progresso.toFixed(4));
-    var limite = window.innerHeight * 0.62;
-    var passou = estacoes.map(function (est) {
-      return est.querySelector('.estacao-marca').getBoundingClientRect().top < limite;
-    });
-    estacoes.forEach(function (est, i) {
-      var antes = est.classList.contains('passou');
-      est.classList.toggle('passou', passou[i]);
-      est.classList.toggle('segue', !!passou[i + 1]);
-      if (passou[i] && !antes && !reduzMovimento) {
-        est.classList.add('chegou');
-        window.setTimeout(function () { est.classList.remove('chegou'); }, 450);
-      }
-    });
-  }
-  function pedirAtualizacao() { if (!agendado) { agendado = true; window.requestAnimationFrame(atualizarRolagem); } }
-  window.addEventListener('scroll', pedirAtualizacao, { passive: true });
-  window.addEventListener('resize', pedirAtualizacao);
-  atualizarRolagem();
-
-  // Linha da previsão desenhada da esquerda para a direita
-  var corte = document.getElementById('corte-rect');
-  var pontoPrevisao = document.querySelector('.ponto-previsao');
-  function desenharPrevisao(mostrar) {
-    if (!corte) { return; }
-    if (!mostrar) { return; }
-    if (reduzMovimento) { corte.setAttribute('width', '160'); return; }
-    var inicio = null;
-    corte.setAttribute('width', '0');
-    function quadro(t) {
-      if (inicio === null) { inicio = t; }
-      var p = Math.min(1, (t - inicio) / 700);
-      var suave = 1 - Math.pow(1 - p, 3);
-      corte.setAttribute('width', String(160 * suave));
-      if (p < 1) { window.requestAnimationFrame(quadro); } else { animarUmaVez(pontoPrevisao, 'pulso'); }
-    }
-    window.requestAnimationFrame(quadro);
-  }
-
-  // Tamanho do texto
-  var botoesTamanho = document.querySelectorAll('[data-escala]');
-  function aplicarEscala(valor) {
-    raiz.style.fontSize = (Number(valor) * 100) + '%';
-    botoesTamanho.forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-escala') === String(valor)));
-    });
-  }
-  var escalaSalva = null;
-  try { escalaSalva = window.localStorage.getItem('cja-escala'); } catch (e) { escalaSalva = null; }
-  if (escalaSalva === '1' || escalaSalva === '1.125' || escalaSalva === '1.25') { aplicarEscala(escalaSalva); }
-  botoesTamanho.forEach(function (b) {
-    b.addEventListener('click', function () {
-      var valor = b.getAttribute('data-escala');
-      aplicarEscala(valor);
-      try { window.localStorage.setItem('cja-escala', valor); } catch (e) { /* sem armazenamento */ }
-    });
-  });
-
-  // Alto contraste
-  var botaoContraste = document.querySelector('[data-acao="contraste"]');
-  var midiaEscura = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
-  function estaEscuro() {
-    var tema = raiz.getAttribute('data-theme');
-    if (tema === 'dark') { return true; }
-    if (tema === 'light') { return false; }
-    return !!(midiaEscura && midiaEscura.matches);
-  }
-  function sincronizarContraste() { botaoContraste.setAttribute('aria-pressed', String(estaEscuro())); }
-  sincronizarContraste();
-  if (midiaEscura && midiaEscura.addEventListener) { midiaEscura.addEventListener('change', sincronizarContraste); }
-  if (window.MutationObserver) { new MutationObserver(sincronizarContraste).observe(raiz, { attributes: true, attributeFilter: ['data-theme'] }); }
-  botaoContraste.addEventListener('click', function () {
-    var escuro = !estaEscuro();
-    raiz.setAttribute('data-theme', escuro ? 'dark' : 'light');
-    sincronizarContraste();
-    try { window.localStorage.setItem('cja-contraste', escuro ? 'escuro' : 'claro'); } catch (e) { /* sem armazenamento */ }
-  });
-
-  // Copiar e-mail
-  var botaoCopiar = document.getElementById('copiar-email');
-  var statusCopiar = document.querySelector('.copiar-status');
-  function selecionarEmail() {
-    var alvo = document.querySelector('.contato-lista .valor');
-    if (!alvo || !window.getSelection) { return; }
-    var faixa = document.createRange();
-    faixa.selectNodeContents(alvo);
-    var selecao = window.getSelection();
-    selecao.removeAllRanges();
-    selecao.addRange(faixa);
-  }
-  botaoCopiar.addEventListener('click', function () {
-    var email = botaoCopiar.getAttribute('data-copiar');
-    function falhou() { selecionarEmail(); statusCopiar.textContent = 'O e-mail está selecionado. Use Ctrl+C para copiar.'; }
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(function () { statusCopiar.textContent = 'E-mail copiado.'; }, falhou);
-      } else { falhou(); }
-    } catch (e) { falhou(); }
-  });
-
-  // Atrium: o que cada perfil recebe
-  var atrium = document.querySelector('[data-demo="atrium"]');
-  if (atrium) {
-    var linhas = atrium.querySelectorAll('tbody tr');
-    var statusAtrium = atrium.querySelector('.demo-status');
-    var botoesPerfil = atrium.querySelectorAll('[data-perfil]');
-    var nomes = { admin: 'Ana', equipe: 'Theo' };
-    function verComo(perfil) {
-      var visiveis = 0;
-      linhas.forEach(function (tr) {
-        var permitido = perfil !== 'cliente' || (tr.getAttribute('data-empresa') === 'norte' && !tr.hasAttribute('data-interna'));
-        if (permitido) { visiveis++; }
-        if (reduzMovimento) { tr.hidden = !permitido; return; }
-        if (!permitido && !tr.hidden) {
-          tr.classList.add('sumindo');
-          window.setTimeout(function () { tr.classList.remove('sumindo'); tr.hidden = true; }, 180);
-        } else if (permitido && tr.hidden) {
-          window.setTimeout(function () {
-            tr.hidden = false;
-            tr.classList.add('surgindo');
-            window.setTimeout(function () { tr.classList.remove('surgindo'); }, 650);
-          }, 120);
-        }
-      });
-      botoesPerfil.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-perfil') === perfil)); });
-      statusAtrium.textContent = perfil === 'cliente'
-        ? 'Clara recebe ' + visiveis + ' de ' + linhas.length + ' registros. Os da Vila Doce e as notas internas não saem do banco.'
-        : nomes[perfil] + ' vê ' + visiveis + ' de ' + linhas.length + ' registros, inclusive as notas internas.';
-    }
-    botoesPerfil.forEach(function (b) {
-      b.addEventListener('click', function () { verComo(b.getAttribute('data-perfil')); });
-    });
-  }
-
-  // Leon Barber Shop: horário reservado não pode ser reservado de novo
-  var leon = document.querySelector('[data-demo="leon"]');
-  if (leon) {
-    var botoesHora = leon.querySelectorAll('[data-hora]');
-    var statusLeon = leon.querySelector('.demo-status');
-    var ocupadosIniciais = [];
-    botoesHora.forEach(function (b) { if (b.getAttribute('aria-disabled') === 'true') { ocupadosIniciais.push(b.getAttribute('data-hora')); } });
-    botoesHora.forEach(function (b) {
-      b.addEventListener('click', function () {
-        var hora = b.getAttribute('data-hora');
-        if (b.getAttribute('aria-disabled') === 'true') {
-          animarUmaVez(b, 'negado');
-          statusLeon.textContent = b.getAttribute('data-reservado') === 'true'
-            ? 'Você já reservou ' + hora + '. O horário não pode ser reservado duas vezes.'
-            : hora + ' já está ocupado. Escolha outro horário.';
-          return;
-        }
-        b.setAttribute('aria-disabled', 'true');
-        b.setAttribute('data-reservado', 'true');
-        animarUmaVez(b, 'carimbo');
-        statusLeon.textContent = 'Reservado: ' + hora + '. Agora esse horário aparece ocupado para os outros clientes.';
-      });
-    });
-    leon.querySelector('[data-acao="recomecar"]').addEventListener('click', function () {
-      botoesHora.forEach(function (b) {
-        var hora = b.getAttribute('data-hora');
-        b.removeAttribute('data-reservado');
-        if (ocupadosIniciais.indexOf(hora) >= 0) { b.setAttribute('aria-disabled', 'true'); } else { b.removeAttribute('aria-disabled'); }
-      });
-      statusLeon.textContent = 'Escolha um horário livre. Os riscados já estão ocupados.';
-    });
-  }
-
-  // ClientFlow: previsão de caixa
-  var clientflow = document.querySelector('[data-demo="clientflow"]');
-  if (clientflow) {
-    var botaoPrevisao = clientflow.querySelector('[data-acao="previsao"]');
-    var previsao = clientflow.querySelector('.previsao');
-    var statusCF = clientflow.querySelector('.demo-status');
-    botaoPrevisao.addEventListener('click', function () {
-      var mostrar = botaoPrevisao.getAttribute('aria-pressed') !== 'true';
-      botaoPrevisao.setAttribute('aria-pressed', String(mostrar));
-      botaoPrevisao.textContent = mostrar ? 'Esconder previsão' : 'Mostrar previsão';
-      previsao.setAttribute('data-oculta', String(!mostrar));
-      desenharPrevisao(mostrar);
-      statusCF.textContent = mostrar
-        ? 'Saldo hoje: R$ 7.400. Previsto em 4 semanas: R$ 9.300.'
-        : 'Saldo hoje: R$ 7.400.';
-    });
-  }
-})();
-</script>
 </body>
 </html>
